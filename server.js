@@ -34,10 +34,10 @@ var content = "<ul>" +
     "<li>MySQL port: "+mysqlPort+"</li>"+
     "<li>MySQL db: "+mysqlDb+"</li>"+
     "</ul>";
-
+var obj = JSON.stringify(process.env,null,4);
 // app is running!
 app.get('/', function(req, res) {
-    res.render('index.html', { contents: content });
+    res.render('index.html', { contents: obj });
 });
 
 //MySQL is running!
