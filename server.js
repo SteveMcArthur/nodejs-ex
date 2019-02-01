@@ -23,25 +23,20 @@ var mysqlString = 'mysql://'   + mysqlUser + ':' + mysqlPass + '@' + mysqlHost +
 
 
 //connect to mysql
-/* var mysqlClient = mysql.createConnection(mysqlString);
+var mysqlClient = mysql.createConnection(mysqlString);
 mysqlClient.connect(function(err){
   if (err) console.log(err);
-}); */
+});
 
-var content = "<ul>" +
-    "<li>MySQL user: "+mysqlUser+"</li>"+
-    "<li>MySQL host: "+mysqlHost+"</li>"+
-    "<li>MySQL port: "+mysqlPort+"</li>"+
-    "<li>MySQL db: "+mysqlDb+"</li>"+
-    "</ul>";
+
 
 // app is running!
 app.get('/', function(req, res) {
-    res.render('index.html', { contents: content });
+    res.render('index.html', { contents: "Success !" });
 });
 
 //MySQL is running!
-/* app.get('/mysql', function(req, res) {
+app.get('/mysql', function(req, res) {
   mysqlClient.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
     if (err) {
       res.send('NOT OK' + JSON.stringify(err));
@@ -49,7 +44,7 @@ app.get('/', function(req, res) {
       res.send('OK: ' + rows[0].solution);
     }
   });
-}); */
+}); 
 
 app.listen(port, ipaddr);
 
