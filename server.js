@@ -28,7 +28,7 @@ mysqlClient.connect(function(err){
   if (err) console.log(err);
 }); */
 
-var html = "<ul>" +
+var content = "<ul>" +
     "<li>"+mysqlUser+"</li>"+
     "<li>"+mysqlHost+"</li>"+
     "<li>"+mysqlPort+"</li>"+
@@ -37,7 +37,7 @@ var html = "<ul>" +
 
 // app is running!
 app.get('/', function(req, res) {
-    res.render('index.html', { contents: html });
+    res.render('index.html', { contents: content });
 });
 
 //MySQL is running!
