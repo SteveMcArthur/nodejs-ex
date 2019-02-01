@@ -17,7 +17,7 @@ var mysqlPass = process.env.MYSQL_PASSWORD; //mysql password
 var mysqlDb   = process.env.MYSQL_DATABASE; //mysql database name
 
 //connection strings
-var mysqlString = 'mysql://'   + mysqlUser + ':' + c + '@' + mysqlHost + ':' + mysqlPort + '/' + mysqlDb;
+var mysqlString = 'mysql://'   + mysqlUser + ':' + mysqlPass + '@' + mysqlHost + ':' + mysqlPort + '/' + mysqlDb;
 
 
 //connect to mysql
