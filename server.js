@@ -4,6 +4,8 @@ var mysql = require('mysql');
 
 var app = express();
 
+app.engine('html', require('ejs').renderFile);
+
 //app configuration
 var ipaddr = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
@@ -31,11 +33,11 @@ var html = "<ul>" +
     "<li>"+mysqlHost+"</li">+
     "<li>"+mysqlPort+"</li">+
     "<li>"+mysqlDb+"</li">+
-    "</ul>"
+    "</ul>";
 
 // app is running!
 app.get('/', function(req, res) {
-  res.send(html);
+    res.render('index.html', { contents: html });
 });
 
 //MySQL is running!
