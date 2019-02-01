@@ -29,15 +29,15 @@ mysqlClient.connect(function(err){
 }); */
 
 var html = "<ul>" +
-    "<li>"+mysqlUser+"</li">+
-    "<li>"+mysqlHost+"</li">+
-    "<li>"+mysqlPort+"</li">+
-    "<li>"+mysqlDb+"</li">+
+    "<li>"+mysqlUser+"</li>"+
+    "<li>"+mysqlHost+"</li>"+
+    "<li>"+mysqlPort+"</li>"+
+    "<li>"+mysqlDb+"</li>"+
     "</ul>";
 
 // app is running!
 app.get('/', function(req, res) {
-    res.render('index.html', { contents: "something" });
+    res.render('index.html', { contents: html });
 });
 
 //MySQL is running!
