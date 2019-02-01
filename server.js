@@ -37,7 +37,7 @@ var html = "<ul>" +
 
 // app is running!
 app.get('/', function(req, res) {
-    res.render('index.html', { contents: html });
+    res.render('index.html', { contents: "something" });
 });
 
 //MySQL is running!
