@@ -29,10 +29,10 @@ mysqlClient.connect(function(err){
 }); */
 
 var content = "<ul>" +
-    "<li>"+mysqlUser+"</li>"+
-    "<li>"+mysqlHost+"</li>"+
-    "<li>"+mysqlPort+"</li>"+
-    "<li>"+mysqlDb+"</li>"+
+    "<li>MySQL user: "+mysqlUser+"</li>"+
+    "<li>MySQL host: "+mysqlHost+"</li>"+
+    "<li>MySQL port: "+mysqlPort+"</li>"+
+    "<li>MySQL db: "+mysqlDb+"</li>"+
     "</ul>";
 
 // app is running!
